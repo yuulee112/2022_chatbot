@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>냥 챗봇</title>
+        <link rel="stylesheet" type="text/css" href="day1.css"/>
+        <script src="day1.js"></script>
+    </head>
+    
+    <body id = "back">
+         <!-- 설명말 -->
+         <div id="app"></div>
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+        <script  type='text/javascript'>
+            var app = document.getElementById('app');
+            var typewriter = new Typewriter(app, {
+                loop: false
+            });
+    
+            typewriter
+            .typeString('명령을 입력해주세요!')
+            .pauseFor(1500)
+            .deleteAll()
+            .typeString('간단한 인사부터 따라하기까지 할 수 있어요.')
+            .pauseFor(1500)
+            .deleteAll()
+            .typeString('<strong>고양이는 똑똑해요!</strong>')
+            .pauseFor(1500)
+            .start();
+        </script>
+
+        <!-- 말주머니 -->
+        <div class="box">
+            <p id="talk">냐앙~</p>
+        </div>
+
+        <!-- 고양이 이미지 -->
+        <div class="image">
+            <img src="cat.png" alt="catimg">
+        </div>
+
+        <!-- 입력창 -->
+        <div class="inputform">
+            <input type="text" class="input" id="text" placeholder="입력해주세요.">
+        </div>
+        
+        <!-- 버튼 -->
+        <div class="wrap">
+            <button class="button" id="btn" onclick="clickevent()">시키기</button>
+        </div>
+
+    </body>
+</html>
